@@ -2,7 +2,7 @@
 
 import {
     Box, Text,
-    Card, CardBody, Stack, StackDivider, Heading, Tag
+    Card, CardBody, Stack, StackDivider, Heading, Tag,
     Flex, Avatar, Tooltip, Link
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
