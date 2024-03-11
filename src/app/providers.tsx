@@ -14,9 +14,6 @@ const spoqaBold = localFont({
 })
 
 export function Providers({ children }: { children: React.ReactNode }) {
-
-    const { colorMode } = useColorMode();
-
     const config: ThemeConfig = {
         initialColorMode: "light",
         useSystemColorMode: false,
