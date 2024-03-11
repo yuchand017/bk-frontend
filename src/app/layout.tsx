@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Providers } from "./providers"
+import { ColorModeScript } from '@chakra-ui/react'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
       <html lang='ko'>
       <body>
+      <ColorModeScript initialColorMode='dark'></ColorModeScript>
       <Providers>{children}</Providers>
       </body>
       </html>
