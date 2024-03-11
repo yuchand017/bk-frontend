@@ -1,7 +1,7 @@
 'use client'
 
 import {
-    Flex, Box, Text, Button, Divider, Input, InputRightElement, InputGroup, IconButton,
+    Box, Text, Button, Divider, Input, InputRightElement, InputGroup, IconButton,
     Card, CardBody, Stack, StackDivider, Heading
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,9 +15,7 @@ const SideBar = () => {
     ])
     return (
         <>
-            <Flex w='300px' h='100%' position='fixed'
-            >
-                <Box w='100%' h='100%'>
+            <Box w='300px'>
                     <Box textAlign='center' paddingTop='60px'
                          paddingRight='24px' paddingLeft='24px' paddingBottom='40px'>
                         <Text fontFamily="bold" fontSize='4xl' align='center' marginBottom='28px'>BK.</Text>
@@ -52,7 +50,6 @@ const SideBar = () => {
                         </Card>
                     </Box>
                 </Box>
-            </Flex>
         </>
     );
 }
