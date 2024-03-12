@@ -24,7 +24,7 @@ const FeedBar = () => {
                             <Stack divider={<StackDivider />} spacing='4'>
                                 {school.map((school, index) => (
                                     <Box key={index}>
-                                        <Tag>선린인터넷고등학교에서 트랜드 중</Tag>
+                                        <Tag>경기도에서 트랜드 중</Tag>
                                         <Heading paddingTop='8px' size='md' textTransform='uppercase'>
                                             {school}
                                         </Heading>
@@ -36,7 +36,7 @@ const FeedBar = () => {
                                 <Box>
                                     <Tag>고등 - 실시간 트랜드</Tag>
                                     <Heading paddingTop='8px' size='md' textTransform='uppercase'>
-                                        동아리 면접
+                                        왜 방학끝남????
                                     </Heading>
                                     <Text pt='2' fontSize='sm'>
                                         100+ 명 활동중, 25+ 개의 게시물
@@ -44,7 +44,7 @@ const FeedBar = () => {
                                 </Box>
                                 {Array.from({length:7}, (_, i) => (
                                     <Box key={i}>
-                                        <Tag>선린인터넷고등학교에서 트랜드 중</Tag>
+                                        <Tag>경기도에서 트랜드 중</Tag>
                                         <Flex paddingBottom='12px' paddingTop='12px'>
                                             <Flex flex='1' gap='3' alignItems='center' flexWrap='wrap'>
                                                 <Avatar size='sm' name='@sunrin_tapie' src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' />
@@ -52,14 +52,14 @@ const FeedBar = () => {
                                                 <Box>
                                                     <Heading size='sm'>
                                                         <Tooltip label="@sunrin_tapie" aria-label='@sunrin_tapie'>
-                                                            TAPIE
+                                                            허경영
                                                         </Tooltip>
                                                     </Heading>
                                                 </Box>
                                             </Flex>
                                         </Flex>
                                         <Text>
-                                            디자이너 과제가 공개되었습니다! ... (+사진)<br/>
+                                            선착순 100명 공중부양 무료강의 배포 ... (+사진)<br/>
                                             <Link color='teal.500' href='#'>
                                                 게시글로 이동 <FontAwesomeIcon size='sm' icon={faExternalLink} />
                                             </Link>
