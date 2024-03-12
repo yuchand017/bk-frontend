@@ -27,7 +27,7 @@ const SideSearchBar = () => {
     return (
         <>
             <Box w='600px'>
-                <Text fontFamily="bold" fontSize='4xl' align='center' marginBottom='28px'>이름 미정.</Text>
+                <Text fontFamily="bold" fontSize='4xl' align='center' marginBottom='28px'>BK.</Text>
                 <Box paddingTop='24px' paddingRight='12px' paddingLeft='12px' paddingBottom='12px' >
                     <Text fontFamily='bold' fontSize='md' marginTop='8px' paddingLeft='12px' marginBottom='8px'>무슨 일이 일어나고 있나요?</Text>
                     <InputGroup marginBottom='8px'>
