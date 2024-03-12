@@ -1,18 +1,29 @@
 'use client'
 
 import {
-    Box, Text, Button, Divider, Input, InputRightElement, InputGroup, IconButton,
-    Card, CardBody, Stack, StackDivider, Heading, CardHeader, Flex, Avatar, Tag, TagLeftIcon, TagLabel, CardFooter
+    Box, Text, Button, Input, InputRightElement, InputGroup, IconButton,
+    Card, CardBody, Stack, Heading, CardHeader, Flex, Avatar, Tag, TagLeftIcon, TagLabel, CardFooter,
+    useDisclosure, Textarea
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faChartSimple, faComment, faHeart, faMagnifyingGlass, faSchool} from "@fortawesome/free-solid-svg-icons"
 import React, { useState } from "react";
+import {Modal} from "@chakra-ui/react";
+import {ModalOverlay} from "@chakra-ui/react";
+import {ModalContent} from "@chakra-ui/react";
+import {ModalHeader} from "@chakra-ui/react";
+import {ModalCloseButton} from "@chakra-ui/react";
+import {ModalBody} from "@chakra-ui/react";
+import {FormControl} from "@chakra-ui/react";
+import {FormLabel} from "@chakra-ui/react";
+import {ModalFooter} from "@chakra-ui/react";
 
 const SideSearchBar = () => {
     let [school, schoolSet] = useState([
         "선린인터넷고등학교", "한국디지털미디어고등학교", "휘문고등학교", "상산고등학교", "단국대학교부속소프트웨어고등학교", "서울공연예술고등학교",
         "선린인터넷고등학교1", "한국디지털미디어고등학교1", "휘문고등학교1", "상산고등학교1", "단국대학교부속소프트웨어고등학교1", "서울공연예술고등학교1",
     ])
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
             <Box w='600px'>
@@ -25,6 +36,30 @@ const SideSearchBar = () => {
                             <IconButton size='xs' aria-label='search' icon={<FontAwesomeIcon icon={faMagnifyingGlass} />} />
                         </InputRightElement>
                     </InputGroup>
+                    <Button onClick={onOpen} size='md' colorScheme='teal' w='100%' marginBottom='1px'>✍️ 게시하기</Button>
+                    <Modal
+                        isOpen={isOpen}
+                        onClose={onClose}
+                    >
+                        <ModalOverlay />
+                        <ModalContent>
+                            <ModalHeader>✍️ 게시하기</ModalHeader>
+                            <ModalCloseButton />
+                            <ModalBody pb={6}>
+                                <FormControl>
+                                    <FormLabel>게시물 작성하기</FormLabel>
+                                    <Textarea placeholder='여기에 내용 작성하기'/>
+                                </FormControl>
+                            </ModalBody>
+
+                            <ModalFooter>
+                                <Button onClick={onClose} colorScheme='blue' mr={3}>
+                                    Save
+                                </Button>
+                                <Button onClick={onClose}>Cancel</Button>
+                            </ModalFooter>
+                        </ModalContent>
+                    </Modal>
                     <Card maxH='650px' overflowY='auto' sx={{ "&::-webkit-scrollbar": { display: "none" } }}>
                         <CardBody>
                             <Text fontFamily='bold' fontSize='md' marginTop='8px' paddingLeft='12px' marginBottom='28px'>인기 게시물</Text>
