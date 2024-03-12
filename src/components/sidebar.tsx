@@ -1,13 +1,12 @@
 'use client'
 
 import {
-    Box, Text, Button, Divider, Input, InputRightElement, InputGroup, IconButton,
+    Box, Text, Divider, Input, InputRightElement, InputGroup, IconButton,
     Card, CardBody, Stack, StackDivider, Heading
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react";
-import UserMenu from "@/components/loginMenu/UserMenu";
 import GuestMenu from "@/components/loginMenu/GuestMenu";
 
 const SideBar = () => {

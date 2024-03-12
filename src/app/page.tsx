@@ -5,13 +5,8 @@ import {
     Flex,
     Stat,
     Text,
-    StatLabel,
-    Image,
     StatNumber,
     StatHelpText,
-    StatArrow,
-    Divider,
-    StatGroup,
     Button,
     Tab,
     Stack,
@@ -24,16 +19,14 @@ import {
     CardHeader,
     Heading,
     CardFooter,
-    CardBody, UnorderedList, ListItem, Box, Avatar, IconButton, TagLabel, Tag, TagLeftIcon
+    CardBody, Box, Avatar, TagLabel, Tag, TagLeftIcon
 } from "@chakra-ui/react";
 import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-    faReply,
     faHeart,
     faChartSimple,
     faGlobe,
-    faShareSquare,
     faSchool,
     faComment
 } from "@fortawesome/free-solid-svg-icons"
