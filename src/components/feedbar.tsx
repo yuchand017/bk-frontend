@@ -29,17 +29,17 @@ const FeedBar = () => {
                                             {school}
                                         </Heading>
                                         <Text pt='2' fontSize='sm'>
-                                            100+ 명 활동중, 25+ 개의 게시물
+                                            25+ 개의 게시물
                                         </Text>
                                     </Box>
                                 ))}
                                 <Box>
                                     <Tag>고등 - 실시간 트랜드</Tag>
                                     <Heading paddingTop='8px' size='md' textTransform='uppercase'>
-                                        왜 방학끝남????
+                                        선린인터넷고등학교
                                     </Heading>
                                     <Text pt='2' fontSize='sm'>
-                                        100+ 명 활동중, 25+ 개의 게시물
+                                        25+ 개의 게시물
                                     </Text>
                                 </Box>
                                 {Array.from({length:7}, (_, i) => (
@@ -52,14 +52,14 @@ const FeedBar = () => {
                                                 <Box>
                                                     <Heading size='sm'>
                                                         <Tooltip label="@sunrin_tapie" aria-label='@sunrin_tapie'>
-                                                            허경영
+                                                            TAPIE
                                                         </Tooltip>
                                                     </Heading>
                                                 </Box>
                                             </Flex>
                                         </Flex>
                                         <Text>
-                                            선착순 100명 공중부양 무료강의 배포 ... (+사진)<br/>
+                                            안녕하세요.선린인터넷고등학교 웹,앱 동아리  ... (+사진)<br/>
                                             <Link color='teal.500' href='#'>
                                                 게시글로 이동 <FontAwesomeIcon size='sm' icon={faExternalLink} />
                                             </Link>
