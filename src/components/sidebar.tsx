@@ -7,8 +7,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react";
-import GuestMenu from "@/components/loginMenu/GuestMenu";
 import UserMenu from "@/components/loginMenu/UserMenu";
+import GuestMenu from "@/components/loginMenu/GuestMenu";
 
 const SideBar = () => {
     let [school, schoolSet] = useState([
@@ -18,7 +18,7 @@ const SideBar = () => {
     return (
         <>
             <Box w='300px'>
-                    <UserMenu/>
+                    <GuestMenu/>
                     <Divider/>
                     <Box paddingTop='24px' paddingRight='12px' paddingLeft='12px' paddingBottom='12px' >
                         <Text fontFamily='bold' fontSize='md' marginTop='8px' paddingLeft='12px' marginBottom='8px'>우리학교 커뮤니티 둘러보기</Text>
