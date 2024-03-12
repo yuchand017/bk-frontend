@@ -24,12 +24,21 @@ import {
     CardHeader,
     Heading,
     CardFooter,
-    CardBody, UnorderedList, ListItem, Box, Avatar, IconButton, TagLabel, Tag
+    CardBody, UnorderedList, ListItem, Box, Avatar, IconButton, TagLabel, Tag, TagLeftIcon
 } from "@chakra-ui/react";
 import React, {useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faArrowRight, faGlobe, faSchool} from "@fortawesome/free-solid-svg-icons"
+import {
+    faReply,
+    faHeart,
+    faChartSimple,
+    faGlobe,
+    faShareSquare,
+    faSchool,
+    faComment
+} from "@fortawesome/free-solid-svg-icons"
 import Feedbar from "@/components/feedbar";
+import SideSearchBar from "@/components/SideSearchBar";
 
 export default function Home() {
     const [tabIndex, setTabIndex] = useState(0)
@@ -46,7 +55,6 @@ export default function Home() {
                 <TabList>
                     <Tab>🏠 홈</Tab>
                     <Tab>💬 타임라인</Tab>
-                    <Tab>🏫 선린고 소프트웨어과</Tab>
                 </TabList>
                 <TabPanels>
                     <TabPanel>
@@ -93,13 +101,7 @@ export default function Home() {
                                     </CardHeader>
                                     <CardBody>
                                         <Text>
-                                            3.12<br/>
-                                            메세지 올리는시간 변경<br/>
-                                            새벽5시 {'>'} 오후6시<br/><br/>
-                                            숙제<br/>
-                                            -수학21p 풀어오기(5번제외(가능하면 하공))<br/>
-                                            가정통신문<br/>
-                                            -학부모공개수업 참석여부
+                                            아무것도 없네요.
                                         </Text>
                                     </CardBody>
                                     <CardFooter>
@@ -112,10 +114,102 @@ export default function Home() {
                         </Flex>
                     </TabPanel>
                     <TabPanel>
-                        <p>Yeah yeah. What's up?</p>
-                    </TabPanel>
-                    <TabPanel>
-                        <p>Oh, hello there.</p>
+                        <Flex>
+                            <div><SideSearchBar /></div>
+                            <Stack maxW='600px' spacing={4} align='center' paddingBottom='12px'>
+                                <Text fontFamily='bold' fontSize='2xl' marginTop='8px' paddingLeft='12px' marginBottom='8px'>최신 게시물</Text>
+                                <Card maxW='600px' paddingTop={0} paddingBottom={0}>
+                                <CardHeader>
+                                    <Flex>
+                                        <Flex flex='1' gap='3' alignItems='center' flexWrap='wrap'>
+                                            <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+                                            <Box>
+                                                <Heading size='sm'>Elon Musk</Heading>
+                                                <Text>@elonmusk</Text>
+                                            </Box>
+                                        </Flex>
+                                    </Flex>
+                                </CardHeader>
+                                <Text paddingLeft='24px' paddingRight='24px'>
+                                    <Tag size='sm' key='sm' variant='subtle' colorScheme='cyan'>
+                                        <TagLeftIcon boxSize='12px' as={FontAwesomeIcon} icon={faSchool} />
+                                        <TagLabel>선린인터넷고등학교</TagLabel>
+                                    </Tag><br />
+                                        정말 유치할것 같아 내가 하는 모든 얘기가 산다는게 원래 그런 거라지만
+                                        저푸른 초원위에 그림같은 집을 짓고서 님과 함께 살고싶은 기분이야 누굴 좋아한다는 그 이유가
+                                        그런 이유가 어딨겠어 그저 어느 누군가 맘에들면 그냥 맘에 드는거지
+                                        나는 날아 날아올라
+                                        그대와 함께 있을때면 워우워
+                                        All light 연애하는 기분이란
+                                </Text>
+                                <CardFooter>
+                                    <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faComment} />}>134</Button>
+                                    <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faHeart} />}>1.1만</Button>
+                                    <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faChartSimple} />}>974만</Button>
+                                </CardFooter>
+                            </Card>
+                                <Card maxW='600px' paddingTop={0} paddingBottom={0}>
+                                    <CardHeader>
+                                        <Flex>
+                                            <Flex flex='1' gap='3' alignItems='center' flexWrap='wrap'>
+                                                <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+                                                <Box>
+                                                    <Heading size='sm'>Elon Musk</Heading>
+                                                    <Text>@elonmusk</Text>
+                                                </Box>
+                                            </Flex>
+                                        </Flex>
+                                    </CardHeader>
+                                    <Text paddingLeft='24px' paddingRight='24px'>
+                                        <Tag size='sm' key='sm' variant='subtle' colorScheme='cyan'>
+                                            <TagLeftIcon boxSize='12px' as={FontAwesomeIcon} icon={faSchool} />
+                                            <TagLabel>선린인터넷고등학교</TagLabel>
+                                        </Tag><br />
+                                        정말 유치할것 같아 내가 하는 모든 얘기가 산다는게 원래 그런 거라지만
+                                        저푸른 초원위에 그림같은 집을 짓고서 님과 함께 살고싶은 기분이야 누굴 좋아한다는 그 이유가
+                                        그런 이유가 어딨겠어 그저 어느 누군가 맘에들면 그냥 맘에 드는거지
+                                        나는 날아 날아올라
+                                        그대와 함께 있을때면 워우워
+                                        All light 연애하는 기분이란
+                                    </Text>
+                                    <CardFooter>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faComment} />}>134</Button>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faHeart} />}>1.1만</Button>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faChartSimple} />}>974만</Button>
+                                    </CardFooter>
+                                </Card>
+                                <Card maxW='600px' paddingTop={0} paddingBottom={0}>
+                                    <CardHeader>
+                                        <Flex>
+                                            <Flex flex='1' gap='3' alignItems='center' flexWrap='wrap'>
+                                                <Avatar name='Segun Adebayo' src='https://bit.ly/sage-adebayo' />
+                                                <Box>
+                                                    <Heading size='sm'>Elon Musk</Heading>
+                                                    <Text>@elonmusk</Text>
+                                                </Box>
+                                            </Flex>
+                                        </Flex>
+                                    </CardHeader>
+                                    <Text paddingLeft='24px' paddingRight='24px'>
+                                        <Tag size='sm' key='sm' variant='subtle' colorScheme='cyan'>
+                                            <TagLeftIcon boxSize='12px' as={FontAwesomeIcon} icon={faSchool} />
+                                            <TagLabel>선린인터넷고등학교</TagLabel>
+                                        </Tag><br />
+                                        정말 유치할것 같아 내가 하는 모든 얘기가 산다는게 원래 그런 거라지만
+                                        저푸른 초원위에 그림같은 집을 짓고서 님과 함께 살고싶은 기분이야 누굴 좋아한다는 그 이유가
+                                        그런 이유가 어딨겠어 그저 어느 누군가 맘에들면 그냥 맘에 드는거지
+                                        나는 날아 날아올라
+                                        그대와 함께 있을때면 워우워
+                                        All light 연애하는 기분이란
+                                    </Text>
+                                    <CardFooter>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faComment} />}>134</Button>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faHeart} />}>1.1만</Button>
+                                        <Button size='sm' variant='ghost' leftIcon={<FontAwesomeIcon icon={faChartSimple} />}>974만</Button>
+                                    </CardFooter>
+                                </Card>
+                            </Stack>
+                        </Flex>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
